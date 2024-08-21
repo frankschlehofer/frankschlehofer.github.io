@@ -1,2 +1,1 @@
 # frankschlehofer.github.io
-# yargan
