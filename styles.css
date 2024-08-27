@@ -1,3 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ff6f61; 
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.name-box {
+    background-color: #ffffff; /* Box background color */
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    display: inline-block;
+}
+
 h1 {
-    color: red;
+    margin: 0;
+    font-size: 3rem;
+    color: #333333; /* Text color */
 }
