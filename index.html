@@ -3,29 +3,454 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Website</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
+    <title>Frank Schlehofer - CS Student Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="scrollable">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>FS</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Frank Schlehofer</span>
+                </h1>
+                <p class="hero-subtitle">Computer Science Student at Purdue University</p>
+                <p class="hero-description">
+                    Passionate about software development, machine learning, and creating innovative solutions 
+                    that make a difference. Currently pursuing my Bachelor's in Computer Science.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="hero-contact">
+                    <div class="contact-item">
+                        <span class="contact-label">Email:</span>
+                        <a href="mailto:franklschlehofer@gmail.com">franklschlehofer@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">LinkedIn:</span>
+                        <a href="https://www.linkedin.com/in/frank-schlehofer/" target="_blank">linkedin.com/in/frank-schlehofer</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">GitHub:</span>
+                        <a href="https://github.com/frankschlehofer" target="_blank">github.com/frankschlehofer</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-animation">
+                    <div class="code-line">
+                        <span class="keyword">const</span> 
+                        <span class="variable">portfolio</span> 
+                        <span class="operator">=</span> 
+                        <span class="bracket">{</span>
+                    </div>
+                    <div class="code-line indent">
+                        <span class="variable">purpose</span><span class="operator">:</span> 
+                        <span class="string">"get hired"</span><span class="operator">,</span>
+                    </div>
+                    <div class="code-line indent">
+                        <span class="variable">status</span><span class="operator">:</span> 
+                        <span class="string">"you're reading it"</span><span class="operator">,</span>
+                    </div>
+                    <div class="code-line indent">
+                        <span class="variable">effectiveness</span><span class="operator">:</span> 
+                        <span class="string">"we'll see"</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="bracket">}</span><span class="operator">;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="name-box">
-                <h1>Frank Schlehofer's</h1>
-            </div>
-            <div class="port-box">
-                <h2>Personal Portfolio</h2>
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Ever since my high school computer science teacher opened my eyes to the endless possibilities within tech, I've been captivated. 
+                        What excites me most is the sheer versatility of it all – the ability to create a tool that makes my mom's life easier with an app for her fridge, and then pivot to exploring something as intricate as a hand-tracking model. 
+                    </p>
+                    <p>
+                        I'm someone who is genuinely driven to succeed in whatever I take on, always aiming for accuracy and a complete solution. 
+                        But I also know that the best results often come from teamwork. I truly enjoy collaborating and find I do my best work in an open, honest team setting where everyone feels comfortable asking for help and sharing ideas. 
+                        My current focus is on building out full-stack applications, like my Fridge app, where I'm getting hands-on experience with everything from UI development to API integration and database management.
+                    </p>
+                    <p>
+                        Beyond the screen, my friends and family are a big part of my life and often the inspiration behind my projects. 
+                        I also love staying active with weightlifting and basketball, unwinding with a bit of Minecraft, or simply being outdoors.
+                    </p>
+                    <p>
+                        I'm eager to connect with people who are passionate about building innovative and meaningful technology. Let's chat!
+                    </p>
+                    <div class="skills">
+                        <h3>Technical Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Languages</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Java</span>
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">C</span>
+                                    <span class="skill-tag">SQL</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Frameworks & Tools</h4>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Node.js</span>
+                                    <span class="skill-tag">Express.js</span>
+                                    <span class="skill-tag">PostgreSQL</span>
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">OpenCV</span>
+                                    <span class="skill-tag">Tensorflow</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">3.98</div>
+                        <div class="stat-label">CGPA</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Projects I'm Proud Of</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Years of Coding</div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="container1">
-            <div class="name-box">
-                <h1>Frank Schlehofer's</h1>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            
+            <!-- Featured Projects -->
+            <div class="featured-projects">
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-title-section">
+                            <h3>Full Stack Fridge Management Web App</h3>
+                            <span class="project-status">In Development</span>
+                        </div>
+                        <span class="project-date">March 2025 - Present</span>
+                    </div>
+                    
+                    <p class="project-description">
+                        A comprehensive fullstack web application for managing household food inventory with expiration tracking, 
+                        personalized recipe recommendation, recipe saving, computer vision based ingredient input. Built with modern full-stack technologies and agile development practices.
+                    </p>
+                    
+                    <ul class="project-features">
+                        <li>Node.js & Express backend with RESTful API endpoints</li>
+                        <li>React.js frontend with responsive CSS design</li>
+                        <li>PostgreSQL database with scalable architecture</li>
+                        <li>Connection to both Google Cloud Vision and Spoonacular API</li>
+                        <li>Agile methodology with weekly sprints and GitHub version control</li>
+                    </ul>
+                    
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/frankschlehofer/fridge" class="project-link">GitHub</a>
+                            <a href="#" class="project-link">Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-title-section">
+                            <h3>Handwritten Number Detection Model</h3>
+                        </div>
+                        <span class="project-date">December 2024</span>
+                    </div>
+                    
+                    <p class="project-description">
+                        An intelligent computer vision system that detects and recognizes handwritten numbers in real-time 
+                        using webcam input. Combines OpenCV for hand tracking with a trained TensorFlow model for accurate digit recognition.
+                    </p>
+                    
+                    <ul class="project-features">
+                        <li>Real-time hand and finger position tracking with OpenCV</li>
+                        <li>Machine learning model trained on MNIST dataset</li>
+                        <li>Live webcam integration for real-time detection</li>
+                        <li>High accuracy digit recognition and classification</li>
+                    </ul>
+                    
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">MNIST</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/frankschlehofer/number_detect_through_webcam" class="project-link">GitHub</a>
+                            <a href="#" class="project-link">Demo</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="port-box">
-                <h2>Personal Portfolio</h2>
+
+            <!-- Other Projects -->
+            <div class="other-projects">
+                <h3 class="subsection-title">Additional Projects</h3>
+                <div class="projects-grid">
+                    <div class="project-card compact">
+                        <div class="project-header">
+                            <h4>Custom Unix Shell</h4>
+                            <span class="project-date">Feb 2025 - Mar 2025</span>
+                        </div>
+                        <p>Built a fully functional Unix shell with command parsing, I/O redirection, pipes, and job control features including background execution and signal handling.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">Unix</span>
+                            <span class="tech-tag">Shell Scripting</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card compact">
+                        <div class="project-header">
+                            <h4>Simple C Compiler</h4>
+                            <span class="project-date">Nov 2024 - Dec 2024</span>
+                        </div>
+                        <p>Developed a complete compiler pipeline from lexical analysis to code generation using Flex and Yacc, with type checking, scope resolution, and basic optimizations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">Flex</span>
+                            <span class="tech-tag">Yacc</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card compact">
+                        <div class="project-header">
+                            <h4>AWS Open-Source Contributor Initiative</h4>
+                            <span class="project-date">Sep 2023 - Dec 2023</span>
+                        </div>
+                        <p>Developed "Search Relevance" plugin for OpenSearch Dashboards to improve search result ranking, collaborating with agile development team using AWS services.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card compact">
+                        <div class="project-header">
+                            <h4>Facebook Marketplace Clone</h4>
+                            <span class="project-date">Nov 2023 - Dec 2023</span>
+                        </div>
+                        <p>Designed and developed a marketplace platform using Java with complex GUIs via Java Swing and client-server communication through socket programming.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Java Swing</span>
+                            <span class="tech-tag">Sockets</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+
+    <!-- My Path Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">My Path</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Teaching Assistant</h3>
+                        <h4>CS 240 - Programming in C</h4>
+                        <span class="timeline-date">Spring 2025</span>
+                            <p>
+                                Led weekly lab sessions to reinforce fundamental C programming concepts while 
+                                providing individualized feedback on assignments to improve coding practices and problem-solving skills.
+                            </p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">Teaching</span>
+                            <span class="skill-tag">Mentoring</span>
+                            <span class="skill-tag">Leadership</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Dean's List Achievement</h3>
+                        <h4>Purdue University - 4 Consecutive Semesters</h4>
+                        <span class="timeline-date">Fall 2023 - Present</span>
+                        <p>Consistently earned Dean's List recognition for four consecutive semesters while maintaining a 3.98 CGPA. Demonstrated exceptional academic performance while balancing coursework, projects, and extracurricular activities.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Academic Excellence</span>
+                            <span class="skill-tag">Consistency</span>
+                            <span class="skill-tag">Time Management</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Core Computer Science Coursework</h3>
+                        <h4>Purdue University</h4>
+                        <span class="timeline-date">Aug 2023 - Present</span>
+                        <p>Completed coursework including Data Structures & Algorithms, Anaylsis of Algorithms, Systems Programming, Artificial Intelligence, Information Systems, and Computer Architecture. Built strong foundations in both theoretical concepts and practical implementation.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Data Structures</span>
+                            <span class="skill-tag">Algorithms</span>
+                            <span class="skill-tag">Systems Programming</span>
+                            <span class="skill-tag">Software Engineering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Project-Driven Learning</h3>
+                        <h4>Personal Development & Skill Building</h4>
+                        <span class="timeline-date">2024 - Present</span>
+                        <p>Developed multiple full-stack applications and machine learning projects outside of coursework. Gained hands-on experience with modern development practices, agile methodologies, and emerging technologies through self-directed learning.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Full-Stack Development</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Self-Directed Learning</span>
+                            <span class="skill-tag">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Computer Science Journey Begins</h3>
+                        <h4>Purdue University</h4>
+                        <span class="timeline-date">Aug 2023</span>
+                        <p>Started my Computer Science degree at Purdue University with a passion for technology and problem-solving. Quickly adapted to rigorous coursework while discovering my interests in web development and machine learning.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Foundation Building</span>
+                            <span class="skill-tag">Adaptability</span>
+                            <span class="skill-tag">Passion for Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>I'm always open to discussing new opportunities, interesting projects, or just having a conversation about technology and innovation.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:franklschlehofer@gmail.com">franklschlehofer@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-details">
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/frank-schlehofer/" target="_blank">linkedin.com/in/frank-schlehofer</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">🐙</div>
+                            <div class="contact-details">
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/frankschlehofer" target="_blank">github.com/frankschlehofer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Frank Schlehofer</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
