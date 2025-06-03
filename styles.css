@@ -447,6 +447,13 @@ section {
   flex: 1;
 }
 
+.project-side {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1;
+}
+
 .project-card h3 {
   font-size: 1.4rem;
   color: #ffffff;
