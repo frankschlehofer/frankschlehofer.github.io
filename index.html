@@ -17,8 +17,9 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#classwork" class="nav-link">Classwork</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -44,7 +45,7 @@
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                    <a href="Resume_Schlehofer_site.pdf" class="btn btn-secondary">Resume</a>
+                    <a href="Resume_Schlehofer_Site.pdf" class="btn btn-secondary">Resume</a>
                 </div>
                 <div class="hero-contact">
                     <div class="contact-item">
@@ -75,7 +76,7 @@
                     </div>
                     <div class="code-line indent">
                         <span class="variable">status</span><span class="operator">:</span> 
-                        <span class="string">"hopefully live"</span><span class="operator">,</span>
+                        <span class="string">"hopefully online"</span><span class="operator">,</span>
                     </div>
                     <div class="code-line indent">
                         <span class="variable">effectiveness</span><span class="operator">:</span> 
@@ -152,16 +153,65 @@
                 </div>
                 <div class="about-stats">
                     <div class="stat">
-                        <div class="stat-number">3.98</div>
+                        <div class="stat-number">3.99</div>
                         <div class="stat-label">CGPA</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Projects I'm Proud Of</div>
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Projects</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number">2+</div>
+                        <div class="stat-number">4+</div>
                         <div class="stat-label">Years of Coding</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Software Engineering Intern</h3>
+                        <h4>Garmin International</h4>
+                        <span class="timeline-date">May 2026 - Present</span>
+                            <p>
+                                Architecting features for internal automation tooling in Python to accelerate complex data transformations and streamline
+                                development workflows. Reduced data lookup times by 500% through structural enhancements to core automation workflows, and
+                                instituted rigorous unit, integration, and regression testing to validate critical aircraft performance datasets prior to deployment.
+                            </p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Automation</span>
+                            <span class="skill-tag">Testing</span>
+                            <span class="skill-tag">Software Engineering</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Undergraduate Teaching Assistant</h3>
+                        <h4>Purdue University - Foundations of C, Object-Oriented Programming (Java)</h4>
+                        <span class="timeline-date">Jan 2025 - Present</span>
+                            <p>
+                                Mentored and instructed a cohort of 700+ students on foundational C and Java concepts through 3+ weekly office hours and lab
+                                sessions. Graded and provided individualized feedback on over 2,500 programming assignments, and directly assisted an average
+                                of 30+ students per week with topics including memory management in C, polymorphism in Java, and algorithmic debugging.
+                            </p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">C</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Teaching</span>
+                            <span class="skill-tag">Mentoring</span>
+                            <span class="skill-tag">Leadership</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -171,17 +221,48 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
-            
+            <h2 class="section-title">Project Experience</h2>
+
             <!-- Featured Projects -->
             <div class="featured-projects">
                 <div class="project-card featured">
                     <div class="project-header">
                         <div class="project-title-section">
-                            <h3>Full Stack Fridge Management Web App</h3>
+                            <h3>SlayterHiL Hardware-in-the-Loop Testing and Flight Simulation</h3>
                             <span class="project-status">In Development</span>
                         </div>
-                        <span class="project-date">March 2025 - Present</span>
+                        <span class="project-date">September 2025 - Present</span>
+                    </div>
+
+                    <p class="project-description">
+                        A hardware-in-the-loop simulation and flight testing platform built with Purdue's Embedded Systems Club to accelerate
+                        development and validation of a custom quadcopter flight controller, enabling rapid and safe automated firmware testing.
+                    </p>
+                    <div class="project-side">
+                        <ul class="project-features">
+                            <li>Led an 8-person flight simulation team and engineered a physics engine entirely from scratch</li>
+                            <li>Implemented a rigid-body dynamics model based on Newton-Euler equations to accurately simulate 6-DoF motion</li>
+                            <li>Programmed a realistic propulsion model translating the flight controller's motor commands into precise forces and torques</li>
+                            <li>Implemented numerical integration methods to solve the equations of motion, processing 1,000+ physics updates per second for real-time performance</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-footer">
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">Physics Simulation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <div class="project-title-section">
+                            <h3>Full Stack Fridge Management Web App</h3>
+                            <span class="project-status">Completed</span>
+                        </div>
+                        <span class="project-date">March 2025 - December 2025</span>
                     </div>
                     
                     <p class="project-description">
@@ -378,90 +459,34 @@
         </div>
     </section>
 
-
-    <!-- My Path Section -->
-    <section id="experience" class="experience">
+    <!-- Classwork Section -->
+    <section id="classwork" class="classwork">
         <div class="container">
-            <h2 class="section-title">My Path</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Teaching Assistant</h3>
-                        <h4>CS 240 - Programming in C</h4>
-                        <span class="timeline-date">Spring 2025</span>
-                            <p>
-                                Led weekly lab sessions to reinforce fundamental C programming concepts while 
-                                providing individualized feedback on assignments to improve coding practices and problem-solving skills.
-                            </p>
-                        <div class="timeline-skills">
-                            <span class="skill-tag">C</span>
-                            <span class="skill-tag">Teaching</span>
-                            <span class="skill-tag">Mentoring</span>
-                            <span class="skill-tag">Leadership</span>
-                        </div>
+            <h2 class="section-title">Classwork</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Core Computer Science</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Data Structures & Algorithms</span>
+                        <span class="skill-tag">Analysis of Algorithms</span>
+                        <span class="skill-tag">Artificial Intelligence</span>
+                        <span class="skill-tag">Data Mining & Machine Learning</span>
+                        <span class="skill-tag">Compilers</span>
+                        <span class="skill-tag">Systems Programming</span>
+                        <span class="skill-tag">Computer Architecture</span>
+                        <span class="skill-tag">Object-Oriented Programming</span>
+                        <span class="skill-tag">Relational Databases</span>
+                        <span class="skill-tag">Data Communication & Networks</span>
+                        <span class="skill-tag">C Programming</span>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Dean's List Achievement</h3>
-                        <h4>Purdue University - 4 Consecutive Semesters</h4>
-                        <span class="timeline-date">Fall 2023 - Present</span>
-                        <p>Consistently earned Dean's List recognition for four consecutive semesters while maintaining a 3.98 CGPA. Demonstrated exceptional academic performance while balancing coursework, projects, and extracurricular activities.</p>
-                        <div class="timeline-skills">
-                            <span class="skill-tag">Academic Excellence</span>
-                            <span class="skill-tag">Consistency</span>
-                            <span class="skill-tag">Time Management</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Core Computer Science Coursework</h3>
-                        <h4>Purdue University</h4>
-                        <span class="timeline-date">Aug 2023 - Present</span>
-                        <p>Completed coursework including Data Structures & Algorithms, Anaylsis of Algorithms, Systems Programming, Artificial Intelligence, Information Systems, and Computer Architecture. Built strong foundations in both theoretical concepts and practical implementation.</p>
-                        <div class="timeline-skills">
-                            <span class="skill-tag">Data Structures</span>
-                            <span class="skill-tag">Algorithms</span>
-                            <span class="skill-tag">Systems Programming</span>
-                            <span class="skill-tag">Software Engineering</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Project-Driven Learning</h3>
-                        <h4>Personal Development & Skill Building</h4>
-                        <span class="timeline-date">2024 - Present</span>
-                        <p>Developed multiple full-stack applications and machine learning projects outside of coursework. Gained hands-on experience with modern development practices, agile methodologies, and emerging technologies through self-directed learning.</p>
-                        <div class="timeline-skills">
-                            <span class="skill-tag">Full-Stack Development</span>
-                            <span class="skill-tag">Machine Learning</span>
-                            <span class="skill-tag">Self-Directed Learning</span>
-                            <span class="skill-tag">Innovation</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Computer Science Journey Begins</h3>
-                        <h4>Purdue University</h4>
-                        <span class="timeline-date">Aug 2023</span>
-                        <p>Started my Computer Science degree at Purdue University with a passion for technology and problem-solving. Quickly adapted to rigorous coursework while discovering my interests in web development and machine learning.</p>
-                        <div class="timeline-skills">
-                            <span class="skill-tag">Foundation Building</span>
-                            <span class="skill-tag">Adaptability</span>
-                            <span class="skill-tag">Passion for Learning</span>
-                        </div>
+                <div class="skill-category">
+                    <h4>Math & Theory</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Discrete Math</span>
+                        <span class="skill-tag">Linear Algebra</span>
+                        <span class="skill-tag">Statistics</span>
+                        <span class="skill-tag">Probability</span>
                     </div>
                 </div>
             </div>

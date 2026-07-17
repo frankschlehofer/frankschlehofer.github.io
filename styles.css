@@ -681,6 +681,11 @@ section {
     gap: 8px;
 }
 
+/* Classwork Section */
+.classwork {
+    background: #111111;
+}
+
 /* Contact Section */
 .contact {
     background: #0a0a0a;
