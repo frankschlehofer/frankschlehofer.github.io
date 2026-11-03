@@ -7,6 +7,7 @@
     <meta name="description" content="Frank Schlehofer’s portfolio: Purdue Computer Science, software engineering at Garmin, flight simulation, full-stack applications, and machine learning.">
     <meta name="theme-color" content="#18251e">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="world/world.css">
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -30,17 +31,52 @@
             <a class="menu-button" href="#experience">Experience</a>
             <a class="menu-button" href="#projects">Projects</a>
             <a class="menu-button" href="#classwork">Skills & Education</a>
+            <a class="menu-button world-entry" href="#world">Explore World <span aria-hidden="true">◇</span></a>
             <div class="menu-pair"><a class="menu-button" href="#contact">Get in Touch <span aria-hidden="true">↗</span></a><a class="menu-button" href="#resume">Résumé <span aria-hidden="true">↓</span></a></div>
         </nav>
         <p class="launcher-note"><span class="status-light" aria-hidden="true"></span> Software, simulations & things that make life easier.</p>
         <a class="plain-link" href="#projects">Just here for the work? Explore my projects <span aria-hidden="true">→</span></a>
     </section>
+
+    <section id="world" class="world-view" aria-labelledby="world-title" data-state="loading">
+        <div class="world-canvas"></div>
+        <nav class="world-toolbar" aria-label="World navigation">
+            <a class="menu-button" href="#home">← Main Menu</a>
+            <button type="button" class="menu-button world-destinations">Destinations</button>
+            <button type="button" class="menu-button world-pause">Pause</button>
+            <a class="menu-button" href="Frank_Schlehofer_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a>
+        </nav>
+        <div class="world-overlay">
+            <div class="world-card">
+                <p class="world-kicker">FRANK SCHLEHOFER / INTERACTIVE TOUR</p>
+                <h2 id="world-title" tabindex="-1">A little world.<br>A lot of work.</h2>
+                <p class="world-status" role="status">Preparing the plaza…</p>
+                <p class="world-instructions">WASD to move · Mouse to look · E to view · Esc for menu.</p>
+                <div class="world-card-actions">
+                    <button type="button" class="menu-button world-start" hidden>Start exploring</button>
+                    <button type="button" class="menu-button world-browse">Browse destinations</button>
+                    <button type="button" class="menu-button world-reset" disabled>Reset to plaza</button>
+                </div>
+                <label class="world-quality-label"><input type="checkbox" class="world-quality" checked disabled> Low quality (lower render resolution)</label>
+                <p class="world-fallback"><a href="#projects">All projects</a> · <a href="#experience">All experience</a> · <a href="#home">Back to menu</a></p>
+                <noscript><p>The walking tour needs JavaScript. All work is available through the links above.</p></noscript>
+            </div>
+        </div>
+        <span class="world-crosshair" aria-hidden="true">+</span>
+        <p class="world-target" role="status"></p>
+        <p class="world-controls">WASD · Mouse · E / click to view · Esc for menu</p>
+        <dialog class="world-dialog" aria-labelledby="world-dialog-title">
+            <div class="world-dialog-heading"><h2 id="world-dialog-title">Destinations</h2><button type="button" class="menu-button world-dialog-close">Back to world</button></div>
+            <div class="world-dialog-body"></div>
+        </dialog>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <div class="about-text"><p class="intro">Passionate about software development, machine learning, and creating innovative solutions that make a difference. Currently pursuing my BS and MS in Computer Science at Purdue University.</p>
+                <div class="about-text"><p class="intro">Passionate about software development, machine learning, and creating innovative solutions that make a difference. Currently pursuing my BS/MS in Computer Science at Purdue University.</p>
                     <p>
                         Ever since my high school computer science teacher opened my eyes to the endless possibilities within tech, I've been captivated. 
                         What excites me most is the sheer versatility of it all – the ability to create a tool that makes my mom's life easier with an app for her fridge, and then pivot to exploring something as intricate as a hand-tracking model. 
@@ -81,7 +117,7 @@
         <div class="container">
             <h2 class="section-title">Work Experience</h2>
             <div class="timeline">
-                <div class="timeline-item">
+                <div class="timeline-item" id="work-garmin">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Software Engineering Intern</h3>
@@ -105,16 +141,18 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <h3>Undergraduate Teaching Assistant</h3>
-                        <h4>Purdue University — C, Java & Relational Databases</h4>
+                        <h4>Purdue University — C, Java & Relational Databases (SQL)</h4>
                         <span class="timeline-date">Jan 2025 - Present</span>
                             <p>
-                                Mentored and instructed a cohort of 700+ students on foundational C, Java, and relational database concepts through 3+ weekly office hours and lab
+                                Mentored and instructed a cohort of 700+ students on foundational C, Java, and relational database concepts with SQL through 3+ weekly office hours and lab
                                 sessions. Graded and provided individualized feedback on over 2,500 programming assignments, and directly assisted an average
                                 of 30+ students per week with topics including memory management in C, polymorphism in Java, and algorithmic debugging.
                             </p>
                         <div class="timeline-skills">
                             <span class="skill-tag">C</span>
                             <span class="skill-tag">Java</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">Relational Databases</span>
                             <span class="skill-tag">Teaching</span>
                             <span class="skill-tag">Mentoring</span>
                             <span class="skill-tag">Leadership</span>
@@ -141,7 +179,7 @@
 
             <!-- Featured Projects -->
             <div class="featured-projects">
-                <div class="project-card featured">
+                <div class="project-card featured" id="project-slayterhil">
                     <div class="project-header">
                         <div class="project-title-section">
                             <h3>SlayterHiL Hardware-in-the-Loop Testing and Flight Simulation</h3>
@@ -173,7 +211,7 @@
                     </div>
                 </div>
 
-                <div class="project-card featured">
+                <div class="project-card featured" id="project-fridge">
                     <div class="project-header">
                         <div class="project-title-section">
                             <h3>Frankie’s Fridge</h3>
@@ -254,7 +292,7 @@
                     </div>
                 </div>
 
-                <div class="project-card featured">
+                <div class="project-card featured" id="project-movies">
                     <div class="project-header">
                         <div class="project-title-section">
                             <h3>Hybrid Movie Recommendation System</h3>
@@ -326,6 +364,18 @@
 
                     <div class="project-card compact">
                         <div class="project-header">
+                            <h4>Graduate Compilers — LLVM Compiler Passes (Purdue)</h4>
+                        </div>
+                        <p>Implemented LLVM compiler passes in C++ for data-flow analysis, dead-code elimination, common subexpression elimination, SSA construction, and graph-coloring register allocation as part of Purdue’s graduate Compilers course.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">LLVM</span>
+                            <span class="tech-tag">Compiler Optimization</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card compact">
+                        <div class="project-header">
                             <h4>Simple C Compiler</h4>
                             <span class="project-date">Nov 2024 - Dec 2024</span>
                         </div>
@@ -372,7 +422,7 @@
     <section id="classwork" class="classwork">
         <div class="container">
             <h2 class="section-title">Skills & Education</h2>
-<div class="education-card"><p class="eyebrow">PURDUE UNIVERSITY · WEST LAFAYETTE, IN</p><h3>BS & MS in Computer Science</h3><p>Expected December 2027</p><p>GPA: 3.99 / 4.00</p></div>                    <div class="skills">
+<div class="education-card"><p class="eyebrow">PURDUE UNIVERSITY · WEST LAFAYETTE, IN</p><h3>BS/MS in Computer Science</h3><p>Expected December 2027</p><p>GPA: 3.99 / 4.00</p></div>                    <div class="skills">
                         <h3>Technical Skills</h3>
                         <div class="skills-grid">
                             <div class="skill-category">
@@ -412,6 +462,15 @@
 <h3 class="coursework-title">Classwork</h3>
             <div class="skills-grid">
                 <div class="skill-category">
+                    <h4>Graduate Coursework</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Compilers</span>
+                        <span class="skill-tag">Algorithms</span>
+                        <span class="skill-tag">Algorithmic Game Theory</span>
+                        <span class="skill-tag">Data Communication &amp; Networks</span>
+                    </div>
+                </div>
+                <div class="skill-category">
                     <h4>Core Computer Science</h4>
                     <div class="skill-tags">
                         <span class="skill-tag">Data Structures & Algorithms</span>
@@ -435,6 +494,13 @@
                         <span class="skill-tag">Statistics</span>
                         <span class="skill-tag">Probability</span>
                     </div>
+                </div>
+            </div>
+            <div class="research-overview" role="region" aria-labelledby="research-title">
+                <h3 id="research-title" class="coursework-title">Research</h3>
+                <div class="research-copy">
+                    <h4>Game Theory Research (Purdue)</h4>
+                    <p>Investigating strategic behavior in repeated voting systems, comparing LLM agents against optimal lookahead strategies to evaluate their ability to identify beneficial manipulations.</p>
                 </div>
             </div>
         </div>

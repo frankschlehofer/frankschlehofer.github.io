@@ -22,11 +22,11 @@ if (splash) {
 }
 
 const sections = [...document.querySelectorAll('main > section')];
-const names = {about: 'About Me', experience: 'Experience', projects: 'Projects', classwork: 'Skills & Education', contact: 'Get in Touch', resume: 'Résumé'};
+const names = {about: 'About Me', experience: 'Experience', projects: 'Projects', classwork: 'Skills & Education', contact: 'Get in Touch', resume: 'Résumé', world: 'Explore World'};
 
 document.documentElement.classList.add('enhanced');
 
-for (const section of sections.filter(section => section.id !== 'home')) {
+for (const section of sections.filter(section => !['home', 'world'].includes(section.id))) {
     let selectedCard = null;
     let updateActions = () => {};
     const container = section.querySelector('.container');
@@ -138,6 +138,9 @@ announcement.className = 'sr-only';
 announcement.setAttribute('role', 'status');
 document.body.append(announcement);
 
+let worldSession = null;
+let worldRequest = 0;
+
 function route({focus = true} = {}) {
     if (location.hash === '#main-content') {
         document.getElementById('main-content').focus();
@@ -146,7 +149,22 @@ function route({focus = true} = {}) {
     const requested = location.hash.slice(1) || 'home';
     const id = sections.some(section => section.id === requested) ? requested : 'home';
     sections.forEach(section => { section.hidden = section.id !== id; });
+    worldRequest++;
+    const request = worldRequest;
+    worldSession?.dispose();
+    worldSession = null;
     document.body.classList.toggle('in-section', id !== 'home');
+    document.body.classList.toggle('in-world', id === 'world');
+    if (id === 'world') {
+        import('./world/interface.mjs').then(module => {
+            if (request === worldRequest) worldSession = module.mountWorld(document.getElementById('world'));
+        }).catch(error => {
+            if (request !== worldRequest) return;
+            document.querySelector('.world-status').textContent = 'The world could not load. Use All projects or All experience below.';
+            document.getElementById('world').dataset.state = 'failed';
+            console.warn('World loading failed:', error.message);
+        });
+    }
     document.title = `${id === 'home' ? 'Portfolio' : names[id]} — Frank Schlehofer`;
     window.scrollTo({top: 0, behavior: 'instant'});
     if (focus && id !== 'home') document.querySelector(`#${id} h2`).focus({preventScroll: true});

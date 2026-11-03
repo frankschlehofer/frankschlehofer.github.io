@@ -586,6 +586,24 @@ h1 span {
 .coursework-title {
   padding-bottom:0
 }
+
+.research-copy {
+  background:#211b16;
+  padding:24px 30px 30px
+}
+
+.research-copy h4 {
+  color:#e4d5a4;
+  margin-bottom:12px
+}
+
+.research-copy p {
+  max-width:75ch;
+  color:#d1ccc2;
+  font-size:14px;
+  line-height:1.8;
+  margin-bottom:0
+}
 .contact-content {
   grid-template-columns:minmax(0,1fr) 300px;
   align-items:center

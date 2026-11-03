@@ -2,17 +2,19 @@
 
 # Frank Schlehofer — launcher portfolio
 
-A Minecraft-inspired, original portfolio presentation using the existing static HTML/CSS/JavaScript stack. No build step or runtime dependencies.
+A Minecraft-inspired portfolio using the existing static HTML/CSS/JavaScript stack. No build step. The optional walking tour lazy-loads locally hosted Three.js; ordinary portfolio views do not load the renderer.
 
 ## Local preview
 
-From the repository root:
+From the website checkout (the directory containing `portfolio-preview/`):
 
 ```sh
-python3 -m http.server 4173 --bind 127.0.0.1 --directory frankschlehofer.github.io
+python3 -m http.server 4173 --bind 127.0.0.1
 ```
 
-Open http://localhost:4173/portfolio-preview/. The `my-app/` Next.js starter is separate and unchanged; it does not serve this reconstruction. Nothing has been deployed.
+Open http://localhost:4173/portfolio-preview/. Choose **Explore World** for the new tour, or open `http://localhost:4173/portfolio-preview/#world` directly. The `my-app/` Next.js starter is separate. The launcher preview was published previously; the new walking-tour changes remain local.
+
+See [world/README.md](world/README.md) for world architecture, controls, tests, performance observations, and review limitations.
 
 ## Structure
 
